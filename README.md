@@ -1,4 +1,4 @@
-mqtt-ios-sample
+mqtt
 ===============
 MQTT iOS Sample is an application that provides a user the ability to publish and subscribe to MQTT topics from their iOS device.
 
