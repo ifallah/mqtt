@@ -17,11 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BE2-2T-xMN">
-                                <rect key="frame" x="251" y="107" width="51" height="31"/>
+                                <rect key="frame" x="261" y="121" width="51" height="31"/>
                                 <connections>
                                     <action selector="ACOnOff:" destination="L7j-A3-Ybf" eventType="valueChanged" id="sC1-6R-KIP"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WFU-HQ-CAa">
+                                <rect key="frame" x="261" y="165" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AC Off Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-zB-sPF">
+                                <rect key="frame" x="5" y="126" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.092944771450000005" green="0.32081995000000002" blue="0.60961552649999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,7 +47,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="AClb" destination="d5G-zB-sPF" id="j1F-Qz-kGc"/>
                         <outlet property="ACswitch" destination="BE2-2T-xMN" id="VFO-8G-P8r"/>
+                        <outlet property="SW" destination="WFU-HQ-CAa" id="fh7-MM-kwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkv-ox-vmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,7 +59,7 @@
         <!--Root View Controller-->
         <scene sceneID="TYq-g0-gYS">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="d0I-ZK-oUm" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d0I-ZK-oUm" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="static" style="grouped" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Wai-79-UAc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

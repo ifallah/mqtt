@@ -48,9 +48,9 @@ NSString *WebLink= @"test";
 UIImageView *imageArabicText;
  NSString *FromIphone= @"Yes";
 NSString *uplodeLink;
-
+//////////////
 NSString *Resev ;
-
+/////////////
 UIImageView *ThaImagForCat;
 NSString *TheInfoForCat;
 NSString *TheLinkForCat;

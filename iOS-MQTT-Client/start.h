@@ -26,7 +26,9 @@
 @property (weak, nonatomic) IBOutlet UISwitch *cleanSession;
 @property (weak, nonatomic) IBOutlet UISwitch *ACswitch;
 
+@property (weak, nonatomic) IBOutlet UISwitch *SW;
 
+@property (retain, nonatomic) IBOutlet UILabel *AClb;
 
 
 @end

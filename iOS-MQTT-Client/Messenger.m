@@ -80,7 +80,7 @@
 @implementation SubscribeCallbacks
 - (void) onSuccess:(NSObject*) invocationContext
 {
-    NSLog(@"SubscribeCallbacks - onSuccess");
+  //  NSLog(@"SubscribeCallbacks - onSuccess");
     NSString *topic = (NSString *)invocationContext;
     [[Messenger sharedMessenger] addLogMessage:[NSString stringWithFormat:@"Subscribed to %@", topic] type:@"Action"];
 
@@ -129,14 +129,20 @@
     int qos = msg.qos;
     BOOL retained = msg.retained;
     NSString *payload = [[NSString alloc] initWithBytes:msg.payload length:msg.payloadLength encoding:NSUTF8StringEncoding];
+    //NSLog(@" Salehhhh  = %@", payload);
+    Resev = payload;
                          
                          //NSASCIIStringEncoding];
     NSString *topic = msg.destinationName;
     NSString *retainedStr = retained ? @" [retained]" : @"";
     NSString *logStr = [NSString stringWithFormat:@"[%@ QoS:%d] %@%@", topic, qos, payload, retainedStr];
-    NSLog(@"%s:%d - %@", __func__, __LINE__, logStr);
-    NSLog(@"GeneralCallbacks - onMessageArrived!");
+   // NSLog(@"%s:%d - %@", __func__, __LINE__, logStr);
+    
+   // NSLog(@" %@", logStr);
+   // NSLog(@"GeneralCallbacks - onMessageArrived!");
     [[Messenger sharedMessenger] addLogMessage:logStr type:@"Subscribe"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NotiCome" object:nil];
 }
 - (void) onMessageDelivered:(NSObject*)invocationContext messageId:(int)msgId
 {

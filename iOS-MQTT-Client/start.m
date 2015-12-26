@@ -70,11 +70,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.AClb.text= @"------------  ";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.connectView = self;
     
-    NSLog(@"%s:%d", __func__, __LINE__);
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(NotiCome) name:@"NotiCome" object:nil];
+    
+   // NSLog(@"%s:%d", __func__, __LINE__);
     
     NSString * servmqtt = @"maher.noip.me";
     NSString * portmqtt = @"1883";
@@ -96,19 +98,19 @@
   //  [appDelegate switchToPublish];
 
     //[self sendetomqtt];
-    [NSTimer scheduledTimerWithTimeInterval:2.00 target:self selector:@selector(sendetomqtt) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:3.00 target:self selector:@selector(sendetomqtt) userInfo:nil repeats:NO];
     
 }
 -(void)sendetomqtt{
     
-    [self smqtt:@"hi aim iphone"];
+    [self smqtt:@"AreYouOnLineAC"];
     
     
 }
 
 -(void)smqtt:(NSString*)Msg{
     
-    NSString* topic = @"hi";
+    NSString* topic = @"AC";
    
     
     
@@ -121,9 +123,32 @@
     [[Messenger sharedMessenger] subscribe:topic qos:0];
 
 }
+
+
+
+-(void)NotiCome{
+    
+   // NSLog(@" Mqtt MSG  =  %@",Resev);
+    
+    if ([Resev isEqualToString:@"Yes Iam Online :)"]) {
+        
+        [self.ACswitch setOn:YES animated:YES];
+        [self.SW setOn:YES animated:YES];      //  [self.ACswitch setAlpha:0.2];
+       // [self.ACswitch setHidden:YES];
+         
+         NSLog(@" NotiCome=-%@-=",Resev);
+        self.AClb.text= @"AC its online  ";
+        
+    }else {
+        
+        
+        NSLog(@" Mqtt MSG=-%@-=",Resev);
+    }
+    
+}
 - (IBAction)newaction:(id)sender {
     
-    [self smqtt:@"New Action"];
+    [self smqtt:@"AreYouOnLineAC"];
     
 }
 - (void)didReceiveMemoryWarning
@@ -131,8 +156,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 //- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
 //    NSLog(@"textFieldShouldBeginEditing");
 //    textField.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1.0f];
