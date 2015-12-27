@@ -16,8 +16,8 @@
 {
    // NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
     [[Messenger sharedMessenger] addLogMessage:@"Connected to server!" type:@"Action"];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate updateConnectButton];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+ //   [appDelegate updateConnectButton];
 }
 - (void) onFailure:(NSObject*) invocationContext errorCode:(int) errorCode errorMessage:(NSString*) errorMessage
 {
@@ -37,8 +37,8 @@
 {
    // NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
     [[Messenger sharedMessenger] addLogMessage:@"Disconnected from server!" type:@"Action"];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate updateConnectButton];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   // [appDelegate updateConnectButton];
 }
 - (void) onFailure:(NSObject*) invocationContext errorCode:(int) errorCode errorMessage:(NSString*) errorMessage
 {
@@ -77,8 +77,8 @@
     NSString *topic = (NSString *)invocationContext;
     [[Messenger sharedMessenger] addLogMessage:[NSString stringWithFormat:@"Subscribed to %@", topic] type:@"Action"];
 
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate reloadSubscriptionList];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   // [appDelegate reloadSubscriptionList];
 }
 - (void) onFailure:(NSObject*) invocationContext errorCode:(int) errorCode errorMessage:(NSString*) errorMessage
 {
@@ -113,9 +113,9 @@
 - (void) onConnectionLost:(NSObject*)invocationContext errorMessage:(NSString*)errorMessage
 {
     [[[Messenger sharedMessenger] subscriptionData] removeAllObjects];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate updateConnectButton];
-    [appDelegate reloadSubscriptionList];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   // [appDelegate updateConnectButton];
+   // [appDelegate reloadSubscriptionList];
 }
 - (void) onMessageArrived:(NSObject*)invocationContext message:(MqttMessage*)msg
 {
@@ -190,8 +190,8 @@
     
     
     [[self subscriptionData] removeAllObjects];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate reloadSubscriptionList];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   // [appDelegate reloadSubscriptionList];
     
     [client disconnectWithOptions:opts invocationContext:self onCompletion:[[DisconnectCallbacks alloc] init]];
 }
@@ -254,8 +254,8 @@
     msg.timestamp = [DateFormatter stringFromDate:[NSDate date]];
     
     [self.logMessages addObject:msg];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate reloadLog];
+   // AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+   // [appDelegate reloadLog];
 }
 
 @end

@@ -43,8 +43,8 @@
         }
         [[Messenger sharedMessenger] connectWithHosts:servers ports:ports clientId:clientID cleanSession:self.cleanSession.isOn];
     
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        [appDelegate switchToPublish];
+      //  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+       // [appDelegate switchToPublish];
     } else {
         [[Messenger sharedMessenger] disconnectWithTimeout:5];
     }
@@ -72,9 +72,9 @@
 	// Do any additional setup after loading the view.
     self.AClb.text= @"Witing ... ";
     
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    appDelegate.connectView = self;
+  //
+  //  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  //  appDelegate.connectView = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(NotiCome) name:@"NotiCome" object:nil];
     

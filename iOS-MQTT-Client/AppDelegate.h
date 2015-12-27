@@ -12,27 +12,27 @@
 
 #import <UIKit/UIKit.h>
 #import "start.h"
-#import "PublishViewController.h"
+//#import "PublishViewController.h"
 //#import "SubscribeViewController.h"
-#import "LogViewController.h"
-#import "ConnectViewController.h"
+//#import "LogViewController.h"
+//#import "ConnectViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (weak, nonatomic) UITabBarController *tabBar;
 @property (weak, nonatomic) start *connectView;
-@property (weak, nonatomic) PublishViewController *publishView;
+//@property (weak, nonatomic) PublishViewController *publishView;
 //@property (weak, nonatomic) SubscribeViewController *subscribeView;
-@property (weak, nonatomic) LogViewController *logView;
+//@property (weak, nonatomic) LogViewController *logView;
 @property (weak, nonatomic) UITableView *subListView;
 
-- (void)switchToConnect;
-- (void)switchToPublish;
-- (void)switchToSubscribe;
-- (void)switchToLog;
-- (void)clearLog;
-- (void)reloadLog;
-- (void)updateConnectButton;
-- (void)reloadSubscriptionList;
-
+//- (void)switchToConnect;
+//- (void)switchToPublish;
+//- (void)switchToSubscribe;
+//- (void)switchToLog;
+//- (void)clearLog;
+//- (void)reloadLog;
+//- (void)updateConnectButton;
+//- (void)reloadSubscriptionList;
+//
 @end
