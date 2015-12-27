@@ -198,11 +198,11 @@
 
 - (void)publish:(NSString *)topic payload:(NSString *)payload qos:(int)qos retained:(BOOL)retained
 {
-    NSLog(@"1-%@",topic);
+    //NSLog(@"1-%@",topic);
    // NSString * tryToUTF8 = [[NSString alloc]initWithFormat:@"",]
-    [topic UTF8String];
+   // [topic UTF8String];
     
-    NSLog(@"2-%@",topic);
+   // NSLog(@"2-%@",topic);
     NSString *retainedStr = retained ? @" [retained]" : @"";
     NSString *logStr = [NSString stringWithFormat:@"[%@] %@%@", topic, payload, retainedStr];
    // NSLog(@"%s:%d - %@", __func__, __LINE__, logStr);

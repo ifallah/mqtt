@@ -153,9 +153,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="256" y="126" width="51" height="31"/>
                                 </variation>
-                                <connections>
-                                    <action selector="ACOnOff:" destination="L7j-A3-Ybf" eventType="valueChanged" id="sC1-6R-KIP"/>
-                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.52484697358409127" green="0.78956970496216572" blue="0.83246073298429324" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,14 +164,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q9M-Hv-CIy">
                             <color key="tintColor" red="0.092944771450000005" green="0.32081995000000002" blue="0.60961552649999995" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="newaction:" destination="L7j-A3-Ybf" id="PbC-5d-Uai"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="AClb" destination="d5G-zB-sPF" id="j1F-Qz-kGc"/>
-                        <outlet property="ACswitch" destination="BE2-2T-xMN" id="VFO-8G-P8r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkv-ox-vmB" userLabel="First Responder" sceneMemberID="firstResponder"/>

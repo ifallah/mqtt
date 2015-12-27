@@ -20,11 +20,12 @@
     
 }
 - (IBAction)ACOnOff:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *connectButton;
-@property (weak, nonatomic) IBOutlet UITextField *serverInput;
-@property (weak, nonatomic) IBOutlet UITextField *portInput;
+//@property (weak, nonatomic) IBOutlet UIButton *connectButton;
+//@property (weak, nonatomic) IBOutlet UITextField *serverInput;
+//@property (weak, nonatomic) IBOutlet UITextField *portInput;
 @property (weak, nonatomic) IBOutlet UISwitch *cleanSession;
-@property (weak, nonatomic) IBOutlet UISwitch *ACswitch;
+
+//@property (weak, nonatomic) IBOutlet UISwitch *ACswitch;
 
 @property (weak, nonatomic) IBOutlet UISwitch *SW;
 
