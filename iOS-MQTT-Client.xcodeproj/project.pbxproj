@@ -18,11 +18,8 @@
 		96BBA9C4185E510A00DEE145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9C3185E510A00DEE145 /* main.m */; };
 		96BBA9C8185E510A00DEE145 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9C7185E510A00DEE145 /* AppDelegate.m */; };
 		96BBA9CA185E510A00DEE145 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BBA9C9185E510A00DEE145 /* Images.xcassets */; };
-		96BBA9D1185E510A00DEE145 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BBA9D0185E510A00DEE145 /* XCTest.framework */; };
 		96BBA9D2185E510A00DEE145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BBA9B7185E510900DEE145 /* Foundation.framework */; };
 		96BBA9D3185E510A00DEE145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BBA9BB185E510900DEE145 /* UIKit.framework */; };
-		96BBA9DB185E510A00DEE145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96BBA9D9185E510A00DEE145 /* InfoPlist.strings */; };
-		96BBA9DD185E510A00DEE145 /* iOS_MQTT_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9DC185E510A00DEE145 /* iOS_MQTT_ClientTests.m */; };
 		96BBA9FC185E517600DEE145 /* Messenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9EF185E517600DEE145 /* Messenger.m */; };
 		B41C6B091C2DE2F200DD89D2 /* start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41C6B081C2DE2F200DD89D2 /* start.storyboard */; };
 		B46B67A81C2318D30021FD05 /* start.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B67A71C2318D30021FD05 /* start.m */; };
@@ -64,10 +61,6 @@
 		96BBA9C7185E510A00DEE145 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		96BBA9C9185E510A00DEE145 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96BBA9CF185E510A00DEE145 /* iOS-MQTT-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-MQTT-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96BBA9D0185E510A00DEE145 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		96BBA9D8185E510A00DEE145 /* iOS-MQTT-ClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-MQTT-ClientTests-Info.plist"; sourceTree = "<group>"; };
-		96BBA9DA185E510A00DEE145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		96BBA9DC185E510A00DEE145 /* iOS_MQTT_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_MQTT_ClientTests.m; sourceTree = "<group>"; };
 		96BBA9EE185E517600DEE145 /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
 		96BBA9EF185E517600DEE145 /* Messenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenger.m; sourceTree = "<group>"; };
 		B41C6B081C2DE2F200DD89D2 /* start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = start.storyboard; sourceTree = "<group>"; };
@@ -100,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96BBA9D1185E510A00DEE145 /* XCTest.framework in Frameworks */,
 				96BBA9D3185E510A00DEE145 /* UIKit.framework in Frameworks */,
 				96BBA9D2185E510A00DEE145 /* Foundation.framework in Frameworks */,
 				B47E057C1BE3D74F000547B1 /* libiosMQTT.a in Frameworks */,
@@ -125,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				96BBA9BD185E510900DEE145 /* iOS-MQTT-Client */,
-				96BBA9D6185E510A00DEE145 /* iOS-MQTT-ClientTests */,
 				96BBA9B6185E510900DEE145 /* Frameworks */,
 				96BBA9B5185E510900DEE145 /* Products */,
 			);
@@ -146,7 +137,6 @@
 				96BBA9B7185E510900DEE145 /* Foundation.framework */,
 				96BBA9B9185E510900DEE145 /* CoreGraphics.framework */,
 				96BBA9BB185E510900DEE145 /* UIKit.framework */,
-				96BBA9D0185E510A00DEE145 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,24 +168,6 @@
 				96BBA9C0185E510900DEE145 /* InfoPlist.strings */,
 				96BBA9C3185E510A00DEE145 /* main.m */,
 				96BBA9C5185E510A00DEE145 /* iOS-MQTT-Client-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		96BBA9D6185E510A00DEE145 /* iOS-MQTT-ClientTests */ = {
-			isa = PBXGroup;
-			children = (
-				96BBA9DC185E510A00DEE145 /* iOS_MQTT_ClientTests.m */,
-				96BBA9D7185E510A00DEE145 /* Supporting Files */,
-			);
-			path = "iOS-MQTT-ClientTests";
-			sourceTree = "<group>";
-		};
-		96BBA9D7185E510A00DEE145 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				96BBA9D8185E510A00DEE145 /* iOS-MQTT-ClientTests-Info.plist */,
-				96BBA9D9185E510A00DEE145 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -312,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46B67AF1C23213F0021FD05 /* Default-568h@2x.png in Resources */,
-				96BBA9DB185E510A00DEE145 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +310,6 @@
 			files = (
 				B46B67A91C2318D30021FD05 /* start.m in Sources */,
 				B46B67B31C23CC9B0021FD05 /* Globals.m in Sources */,
-				96BBA9DD185E510A00DEE145 /* iOS_MQTT_ClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +328,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				96BBA9C1185E510900DEE145 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		96BBA9D9185E510A00DEE145 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96BBA9DA185E510A00DEE145 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
