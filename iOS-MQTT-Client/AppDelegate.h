@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import "start.h"
 #import "PublishViewController.h"
-#import "SubscribeViewController.h"
+//#import "SubscribeViewController.h"
 #import "LogViewController.h"
 #import "ConnectViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -22,7 +22,7 @@
 @property (weak, nonatomic) UITabBarController *tabBar;
 @property (weak, nonatomic) start *connectView;
 @property (weak, nonatomic) PublishViewController *publishView;
-@property (weak, nonatomic) SubscribeViewController *subscribeView;
+//@property (weak, nonatomic) SubscribeViewController *subscribeView;
 @property (weak, nonatomic) LogViewController *logView;
 @property (weak, nonatomic) UITableView *subListView;
 

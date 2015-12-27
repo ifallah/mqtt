@@ -28,13 +28,7 @@
 		96BBA9FA185E517600DEE145 /* LogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9EB185E517600DEE145 /* LogMessage.m */; };
 		96BBA9FB185E517600DEE145 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9ED185E517600DEE145 /* LogViewController.m */; };
 		96BBA9FC185E517600DEE145 /* Messenger.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9EF185E517600DEE145 /* Messenger.m */; };
-		96BBA9FD185E517600DEE145 /* MqttTestTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9F1185E517600DEE145 /* MqttTestTrace.m */; };
-		96BBA9FE185E517600DEE145 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9F3185E517600DEE145 /* PublishViewController.m */; };
-		96BBA9FF185E517600DEE145 /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9F5185E517600DEE145 /* SubscribeViewController.m */; };
-		96BBAA00185E517600DEE145 /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBA9F7185E517600DEE145 /* Subscription.m */; };
 		B41C6B091C2DE2F200DD89D2 /* start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41C6B081C2DE2F200DD89D2 /* start.storyboard */; };
-		B46B67A01C22E1910021FD05 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46B679F1C22E1910021FD05 /* iphone.storyboard */; settings = {ASSET_TAGS = (b, ); }; };
-		B46B67A11C22E1910021FD05 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46B679F1C22E1910021FD05 /* iphone.storyboard */; settings = {ASSET_TAGS = (b, ); }; };
 		B46B67A81C2318D30021FD05 /* start.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B67A71C2318D30021FD05 /* start.m */; };
 		B46B67A91C2318D30021FD05 /* start.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B67A71C2318D30021FD05 /* start.m */; };
 		B46B67AE1C23213F0021FD05 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46B67AD1C23213F0021FD05 /* Default-568h@2x.png */; };
@@ -43,6 +37,7 @@
 		B46B67B31C23CC9B0021FD05 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B67B11C23CC9B0021FD05 /* Globals.m */; };
 		B47E057B1BE3D74F000547B1 /* libiosMQTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B47E05791BE3D74F000547B1 /* libiosMQTT.a */; };
 		B47E057C1BE3D74F000547B1 /* libiosMQTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B47E05791BE3D74F000547B1 /* libiosMQTT.a */; };
+		B4AD242C1C2FE1D300B8D45F /* Subscription.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AD242B1C2FE1D300B8D45F /* Subscription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,16 +80,7 @@
 		96BBA9ED185E517600DEE145 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 		96BBA9EE185E517600DEE145 /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
 		96BBA9EF185E517600DEE145 /* Messenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenger.m; sourceTree = "<group>"; };
-		96BBA9F0185E517600DEE145 /* MqttTestTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MqttTestTrace.h; sourceTree = "<group>"; };
-		96BBA9F1185E517600DEE145 /* MqttTestTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MqttTestTrace.m; sourceTree = "<group>"; };
-		96BBA9F2185E517600DEE145 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
-		96BBA9F3185E517600DEE145 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
-		96BBA9F4185E517600DEE145 /* SubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
-		96BBA9F5185E517600DEE145 /* SubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
-		96BBA9F6185E517600DEE145 /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subscription.h; sourceTree = "<group>"; };
-		96BBA9F7185E517600DEE145 /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subscription.m; sourceTree = "<group>"; };
 		B41C6B081C2DE2F200DD89D2 /* start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = start.storyboard; sourceTree = "<group>"; };
-		B46B679F1C22E1910021FD05 /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone.storyboard; sourceTree = "<group>"; };
 		B46B67A61C2318D30021FD05 /* start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = start.h; sourceTree = "<group>"; };
 		B46B67A71C2318D30021FD05 /* start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = start.m; sourceTree = "<group>"; };
 		B46B67AD1C23213F0021FD05 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -102,6 +88,8 @@
 		B46B67B11C23CC9B0021FD05 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		B47E05791BE3D74F000547B1 /* libiosMQTT.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiosMQTT.a; path = "iOS-MQTT-Client/libiosMQTT.a"; sourceTree = "<group>"; };
 		B47E057A1BE3D74F000547B1 /* MqttOCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MqttOCClient.h; path = "iOS-MQTT-Client/MqttOCClient.h"; sourceTree = "<group>"; };
+		B4AD242A1C2FE1D300B8D45F /* Subscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subscription.h; path = "../../tempp/mqtt-master/iOS-MQTT-Client/Subscription.h"; sourceTree = "<group>"; };
+		B4AD242B1C2FE1D300B8D45F /* Subscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subscription.m; path = "../../tempp/mqtt-master/iOS-MQTT-Client/Subscription.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +171,8 @@
 				B46B67B11C23CC9B0021FD05 /* Globals.m */,
 				B46B67A61C2318D30021FD05 /* start.h */,
 				B46B67A71C2318D30021FD05 /* start.m */,
+				B4AD242A1C2FE1D300B8D45F /* Subscription.h */,
+				B4AD242B1C2FE1D300B8D45F /* Subscription.m */,
 				B41C6B081C2DE2F200DD89D2 /* start.storyboard */,
 				96BBA9E8185E517600DEE145 /* ConnectViewController.h */,
 				96BBA9E9185E517600DEE145 /* ConnectViewController.m */,
@@ -193,17 +183,8 @@
 				96BBA9EC185E517600DEE145 /* LogViewController.h */,
 				96BBA9ED185E517600DEE145 /* LogViewController.m */,
 				96385B9A185E54ED001A8C0B /* Main.storyboard */,
-				B46B679F1C22E1910021FD05 /* iphone.storyboard */,
 				96BBA9EE185E517600DEE145 /* Messenger.h */,
 				96BBA9EF185E517600DEE145 /* Messenger.m */,
-				96BBA9F0185E517600DEE145 /* MqttTestTrace.h */,
-				96BBA9F1185E517600DEE145 /* MqttTestTrace.m */,
-				96BBA9F2185E517600DEE145 /* PublishViewController.h */,
-				96BBA9F3185E517600DEE145 /* PublishViewController.m */,
-				96BBA9F4185E517600DEE145 /* SubscribeViewController.h */,
-				96BBA9F5185E517600DEE145 /* SubscribeViewController.m */,
-				96BBA9F6185E517600DEE145 /* Subscription.h */,
-				96BBA9F7185E517600DEE145 /* Subscription.m */,
 				96BBA9BE185E510900DEE145 /* Supporting Files */,
 			);
 			path = "iOS-MQTT-Client";
@@ -324,7 +305,6 @@
 				27B4374E19B8ACC80063DA5A /* glyphicons_030_pencil.png in Resources */,
 				96BBA9CA185E510A00DEE145 /* Images.xcassets in Resources */,
 				B46B67AE1C23213F0021FD05 /* Default-568h@2x.png in Resources */,
-				B46B67A01C22E1910021FD05 /* iphone.storyboard in Resources */,
 				27B4374F19B8ACC80063DA5A /* glyphicons_212_down_arrow.png in Resources */,
 				27B4375019B8ACC80063DA5A /* glyphicons_213_up_arrow.png in Resources */,
 				B41C6B091C2DE2F200DD89D2 /* start.storyboard in Resources */,
@@ -339,7 +319,6 @@
 			files = (
 				B46B67AF1C23213F0021FD05 /* Default-568h@2x.png in Resources */,
 				96BBA9DB185E510A00DEE145 /* InfoPlist.strings in Resources */,
-				B46B67A11C22E1910021FD05 /* iphone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,15 +332,12 @@
 				96BBA9FA185E517600DEE145 /* LogMessage.m in Sources */,
 				96BBA9C8185E510A00DEE145 /* AppDelegate.m in Sources */,
 				96BBA9FC185E517600DEE145 /* Messenger.m in Sources */,
-				96BBAA00185E517600DEE145 /* Subscription.m in Sources */,
 				B46B67B21C23CC9B0021FD05 /* Globals.m in Sources */,
 				96BBA9C4185E510A00DEE145 /* main.m in Sources */,
 				96BBA9F9185E517600DEE145 /* ConnectViewController.m in Sources */,
 				96BBA9FB185E517600DEE145 /* LogViewController.m in Sources */,
-				96BBA9FD185E517600DEE145 /* MqttTestTrace.m in Sources */,
-				96BBA9FE185E517600DEE145 /* PublishViewController.m in Sources */,
+				B4AD242C1C2FE1D300B8D45F /* Subscription.m in Sources */,
 				B46B67A81C2318D30021FD05 /* start.m in Sources */,
-				96BBA9FF185E517600DEE145 /* SubscribeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -135,7 +135,7 @@
 }
 -(void)sendetomqtt{
     
-    [self smqtt:@"I phone Is Online "];
+    [self smqtt:@"aim iphone"];
     
     
 }
