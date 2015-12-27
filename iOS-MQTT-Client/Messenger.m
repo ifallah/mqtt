@@ -22,7 +22,7 @@
 @implementation ConnectCallbacks
 - (void) onSuccess:(NSObject*) invocationContext
 {
-    NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
+   // NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
     [[Messenger sharedMessenger] addLogMessage:@"Connected to server!" type:@"Action"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate updateConnectButton];
@@ -43,7 +43,7 @@
 @implementation DisconnectCallbacks
 - (void) onSuccess:(NSObject*) invocationContext
 {
-    NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
+   // NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
     [[Messenger sharedMessenger] addLogMessage:@"Disconnected from server!" type:@"Action"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate updateConnectButton];
@@ -52,6 +52,7 @@
 {
     NSLog(@"%s:%d - invocationContext=%@  errorCode=%d  errorMessage=%@", __func__,
           __LINE__, invocationContext, errorCode, errorMessage);
+    
     [[Messenger sharedMessenger] addLogMessage:@"Failed to disconnect!" type:@"Action"];
 }
 @end
@@ -64,7 +65,7 @@
 @implementation PublishCallbacks
 - (void) onSuccess:(NSObject *) invocationContext
 {
-    NSLog(@"PublishCallbacks - onSuccess");
+    NSLog(@"Mqtt On.Success");
 }
 - (void) onFailure:(NSObject *) invocationContext errorCode:(int) errorCode errorMessage:(NSString *)errorMessage
 {
@@ -101,7 +102,7 @@
 @implementation UnsubscribeCallbacks
 - (void) onSuccess:(NSObject*) invocationContext
 {
-    NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
+    //NSLog(@"%s:%d - invocationContext=%@", __func__, __LINE__, invocationContext);
     NSString *topic = (NSString *)invocationContext;
     [[Messenger sharedMessenger] addLogMessage:[NSString stringWithFormat:@"Unsubscribed to %@", topic] type:@"Action"];
 }
@@ -146,7 +147,7 @@
 }
 - (void) onMessageDelivered:(NSObject*)invocationContext messageId:(int)msgId
 {
-    NSLog(@"GeneralCallbacks - onMessageDelivered!");
+   // NSLog(@"GeneralCallbacks - onMessageDelivered!");
 }
 @end
 
@@ -184,7 +185,7 @@
     ConnectOptions *opts = [[ConnectOptions alloc] init];
     opts.timeout = 3600;
     opts.cleanSession = cleanSession;
-    NSLog(@"%s:%d host=%@, port=%@, clientId=%@", __func__, __LINE__, hosts, ports, clientId);
+    NSLog(@" host=%@, port=%@, clientId=%@",  hosts, ports, clientId);
     [client connectWithOptions:opts invocationContext:self onCompletion:[[ConnectCallbacks alloc] init]];
 }
 
@@ -203,7 +204,7 @@
 {
     NSString *retainedStr = retained ? @" [retained]" : @"";
     NSString *logStr = [NSString stringWithFormat:@"[%@] %@%@", topic, payload, retainedStr];
-    NSLog(@"%s:%d - %@", __func__, __LINE__, logStr);
+   // NSLog(@"%s:%d - %@", __func__, __LINE__, logStr);
     [[Messenger sharedMessenger] addLogMessage:logStr type:@"Publish"];
     
     MqttMessage *msg = [[MqttMessage alloc] initWithMqttMessage:topic payload:(char*)[payload UTF8String] length:(int)payload.length qos:qos retained:retained duplicate:NO];
@@ -212,7 +213,7 @@
 
 - (void)subscribe:(NSString *)topicFilter qos:(int)qos
 {
-    NSLog(@"%s:%d topicFilter=%@, qos=%d", __func__, __LINE__, topicFilter, qos);
+    //NSLog(@"%s:%d topicFilter=%@, qos=%d", __func__, __LINE__, topicFilter, qos);
     [client subscribe:topicFilter qos:qos invocationContext:topicFilter onCompletion:[[SubscribeCallbacks alloc] init]];
 
     Subscription *sub = [[Subscription alloc] init];
@@ -248,7 +249,7 @@
     msg.type = type;
     
     NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
-    [DateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    [DateFormatter setDateFormat:@"hh:mm:ss"];
     msg.timestamp = [DateFormatter stringFromDate:[NSDate date]];
     
     [self.logMessages addObject:msg];

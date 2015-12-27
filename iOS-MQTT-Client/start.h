@@ -28,7 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *SW;
 
-@property (retain, nonatomic) IBOutlet UILabel *AClb;
+@property (nonatomic, strong) IBOutlet UILabel *AClb;
 
 
 @end

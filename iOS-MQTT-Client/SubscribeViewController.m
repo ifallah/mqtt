@@ -24,7 +24,7 @@
 @implementation SubscribeViewController
 
 - (IBAction)subscribePressed:(id)sender {
-    NSLog(@"%s:%d - %@", __func__, __LINE__, sender);
+   // NSLog(@"%s:%d - %@", __func__, __LINE__, sender);
     
     NSString *topic = self.topicInput.text;
     
@@ -32,7 +32,7 @@
 }
 
 - (IBAction)qosSegmentChanged:(id)sender {
-    NSLog(@"%s:%d - %@", __func__, __LINE__, sender);
+  //  NSLog(@"%s:%d - %@", __func__, __LINE__, sender);
     NSLog(@"qos changed to: %ld", (long)self.qos.selectedSegmentIndex);
 }
 
@@ -50,7 +50,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSLog(@"%s:%d", __func__, __LINE__);
+  //  NSLog(@"%s:%d", __func__, __LINE__);
         
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.subscribeView = self;

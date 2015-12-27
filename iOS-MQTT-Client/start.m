@@ -70,11 +70,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.AClb.text= @"------------  ";
+    self.AClb.text= @"Witing ... ";
+    
+    
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.connectView = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(NotiCome) name:@"NotiCome" object:nil];
+    
+    
+   // [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(offe) name:@"offe" object:nil];
+    
     
    // NSLog(@"%s:%d", __func__, __LINE__);
     
@@ -98,12 +104,38 @@
   //  [appDelegate switchToPublish];
 
     //[self sendetomqtt];
-    [NSTimer scheduledTimerWithTimeInterval:3.00 target:self selector:@selector(sendetomqtt) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(sendetomqtt) userInfo:nil repeats:NO];
+       //[NSTimer scheduledTimerWithTimeInterval:7.00 target:self selector:@selector(offe) userInfo:nil repeats:NO];
+}
+
+-(void)offe{
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        // code here
+//    
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title" message:@"Alert Message" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *defautAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+//            //enter code here
+//        }];
+//        [alert addAction:defautAction];
+//        //Present action where needed
+//        [self presentViewController:alert animated:YES completion:nil];
+//    });
+//    NSLog(@"ofee recived !!");
+//    
+//    
+    
+    
+
+    
+    
+    
+
     
 }
 -(void)sendetomqtt{
     
-    [self smqtt:@"AreYouOnLineAC"];
+    [self smqtt:@"I phone Is Online "];
     
     
 }
@@ -112,8 +144,7 @@
     
     NSString* topic = @"AC";
    
-    
-    
+    // self.AClb.text= @"send it ";
     //initWithBytes:msg.payload length:msg.payloadLength encoding:NSUTF8StringEncoding];
     
     [[Messenger sharedMessenger] publish:topic payload:Msg qos:0 retained:0];
@@ -128,24 +159,40 @@
 
 -(void)NotiCome{
     
-   // NSLog(@" Mqtt MSG  =  %@",Resev);
+  
     
-    if ([Resev isEqualToString:@"Yes Iam Online :)"]) {
         
-        [self.ACswitch setOn:YES animated:YES];
-        [self.SW setOn:YES animated:YES];      //  [self.ACswitch setAlpha:0.2];
-       // [self.ACswitch setHidden:YES];
-         
-         NSLog(@" NotiCome=-%@-=",Resev);
-        self.AClb.text= @"AC its online  ";
+    NSLog(@" Mqtt MSG=-%@-=",Resev);
+    
+
+    
+    if ([Resev isEqualToString:@"offAC"]) {
+        
+        [self camesonext];
+        
+        
         
     }else {
         
         
-        NSLog(@" Mqtt MSG=-%@-=",Resev);
+        NSLog(@"-cant work with this command-");
     }
     
 }
+-(void)camesonext{
+
+dispatch_async(dispatch_get_main_queue(), ^{
+    self.AClb.text= @"AC its online  ";
+    [self.ACswitch setOn:YES animated:YES];
+    
+ 
+});
+    
+    
+    
+}
+
+
 - (IBAction)newaction:(id)sender {
     
     [self smqtt:@"AreYouOnLineAC"];
